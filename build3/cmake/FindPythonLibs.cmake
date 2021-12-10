@@ -112,7 +112,7 @@ else()
 
   message(STATUS "Looking for versions: ${_PYTHON_VERSIONS}")
 
-  FIND_FILE(_FIND_LIB_PYTHON_PY FindLibPython.py PATHS ${CMAKE_MODULE_PATH} ${CMAKE_ROOT}/Modules)
+  FIND_FILE(_FIND_LIB_PYTHON_PY FindLibPython.py PATHS ${CMAKE_MODULE_PATH} ${CMAKE_ROOT}/Modules NO_CMAKE_FIND_ROOT_PATH)
 
   if(NOT _FIND_LIB_PYTHON_PY)
     message(FATAL_ERROR "Could not find required file 'FindLibPython.py'")
